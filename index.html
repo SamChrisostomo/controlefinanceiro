@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Controle Financeiro</title>
+</head>
+
+<body>
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">UFinance</a>
+            <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+            <ul class="sidenav" id="mobile-menu">
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="waves-effect waves-light" href="#tab1">Inicio</a></li>
+                <li class="tab"><a class="waves-effect waves-light" href="#tab2">Resumo</a></li>
+                <li class="tab"><a class="waves-effect waves-light" href="#tab3">Gráficos</a></li>
+                <li class="tab"><a class="waves-effect waves-light" href="#tab4">Ajustes</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row" id="tab1">
+            <div class="col s12 m12 l8 offset-l2">
+                <form action="#" method="post" id="submit-order">
+                    <div class="row">
+                        <div class="col s6 input-field">
+                            <input type="date" name="data-transacao" id="data-transacao" required />
+                            <label for="data-transacao">Data da transação</label>
+                        </div>
+                        <div class="col s6 input-field">
+                            <input type="number" name="valor-transacao" id="valor-transacao" placeholder="R$ 45,90"
+                                required />
+                            <label for="valor-transacao">Valor da transação</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 input-field">
+                            <input type="text" value="" id="descricao" placeholder="iFood do fim de semana..."
+                                required />
+                            <label for="descricao">Descricão</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 input-field">
+                            <input type="text" name="" id="autocomplete-categoria" class="autocomplete" required>
+                            <label for="autocomplete-categoria">Categoria</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s4">
+                            <label for="movimentacao">Movimentação</label>
+                            <select name="movimentacao" id="movimentacao">
+                                <option value="entrada" selected>Entrada</option>
+                                <option value="saida">Saída</option>
+                            </select>
+                        </div>
+                        <div class="col s8">
+                            <label for="forma-pagamento">Produto</label>
+                            <select name="forma-pagamento" id="forma-pagamento">
+                                <option value="boleto">Boleto</option>
+                                <option value="cartao-credito" selected>Cartão de Crédito</option>
+                                <option value="cartao-debito">Cartão de Débito</option>
+                                <option value="transferencia">Transferência</option>
+                                <option value="pix">Pix</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row right">
+                        <div class="col s3">
+                            <button type="submit" class="btn red waves-effect waves-light">
+                                <i class="material-icons">send</i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row" id="tab2">
+            <div class="col s12 m12 l8 offset-l2">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Descrição</th>
+                            <th>Categoria</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row" id="tab3">
+            <div class="col s12 m12 l8 offset-l2">
+                <h1>tab3</h1>
+            </div>
+        </div>
+        <div class="row" id="tab4">
+            <div class="col s12 m12 l8 offset-l2">
+                <div class="row">
+                    <div class="col s12">
+                        <h5>Cadastrar</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s5">
+                        <button data-target="modal3" class="btn red waves-effect waves-light modal-trigger">Categoria</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal3" class="modal modal-fixed-footer">
+        <form action="#" method="get" id="catSubmitForm">
+        <div class="modal-content">
+            <h4>Nova Categoria</h4>
+            <p>Aqui você pode cadastrar categorias para registro dos ganhos e despesas</p>
+            <div class="row">
+                <div class="col s12">
+                        <div class="row">
+                            <div class="col s12 input-field">
+                                <input type="text" id="nova-categoria" name="nova-categoria" required />
+                                <label for="nova-categoria">Categoria</label>
+                            </div>
+                            <div class="row">
+                                <div class="col s3 input-field">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="waves-effect waves-green btn-flat">Cadastrar</button>
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
+            </div>
+        </form>
+    </div>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
