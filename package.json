@@ -1,8 +1,9 @@
 {
-  "name": "Controle Financeiro",
+  "name": "ufinance",
   "version": "1.0.0",
   "description": "Aplicativo criado para registro de ganhos e despesas",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "materialize-css": "^1.0.0-rc.2",
     "mongoose": "^8.5.1",
     "uuid": "^10.0.0"
   },
