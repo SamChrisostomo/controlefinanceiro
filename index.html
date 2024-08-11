@@ -8,6 +8,10 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/materialize.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
     <title>Controle Financeiro</title>
 </head>
 
@@ -110,7 +114,7 @@
         </div>
         <div class="row" id="tab3">
             <div class="col s12 m12 l8 offset-l2">
-                <h1>tab3</h1>
+                <canvas id="myChart"></canvas>
             </div>
         </div>
         <div class="row" id="tab4">
@@ -122,7 +126,8 @@
                 </div>
                 <div class="row">
                     <div class="col s5">
-                        <button data-target="modal3" class="btn red waves-effect waves-light modal-trigger">Categoria</button>
+                        <button data-target="modal3"
+                            class="btn red waves-effect waves-light modal-trigger">Categoria</button>
                     </div>
                 </div>
             </div>
@@ -130,11 +135,11 @@
     </div>
     <div id="modal3" class="modal modal-fixed-footer">
         <form action="#" method="get" id="catSubmitForm">
-        <div class="modal-content">
-            <h4>Nova Categoria</h4>
-            <p>Aqui você pode cadastrar categorias para registro dos ganhos e despesas</p>
-            <div class="row">
-                <div class="col s12">
+            <div class="modal-content">
+                <h4>Nova Categoria</h4>
+                <p>Aqui você pode cadastrar categorias para registro dos ganhos e despesas</p>
+                <div class="row">
+                    <div class="col s12">
                         <div class="row">
                             <div class="col s12 input-field">
                                 <input type="text" id="nova-categoria" name="nova-categoria" required />
@@ -142,7 +147,7 @@
                             </div>
                             <div class="row">
                                 <div class="col s3 input-field">
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -155,8 +160,6 @@
             </div>
         </form>
     </div>
-    <script src="js/materialize.min.js"></script>
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
-
 </html>
