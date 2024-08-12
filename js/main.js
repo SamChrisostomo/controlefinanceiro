@@ -1,4 +1,4 @@
-import Weather from "./weather.js";
+import Weather from "./Weather.js";
 
 const materialRender = createMaterialRender();
 
@@ -248,8 +248,3 @@ function createCatSubmitListener() {
         subscribe
     }
 }
-
-(function call() {
-    const w = new Weather();
-    w.getLocation();
-})()

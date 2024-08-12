@@ -19,7 +19,7 @@ export default class Graficos {
     }
 
     setGrafico(labels, data) {
-        const ctx = document.getElementById('myChart');
+        const ctx = document.querySelector('#myChart');
 
         new Chart(ctx, {
             type: 'bar',
