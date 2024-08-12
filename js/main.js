@@ -1,4 +1,4 @@
-import Weather from "./Weather.js";
+import Weather from "./weather.js";
 
 const materialRender = createMaterialRender();
 
