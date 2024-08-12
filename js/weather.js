@@ -1,4 +1,4 @@
-import Graficos from "./Graficos.js";
+import Graficos from "./graficos.js";
 
 export default class Weather {
     g = new Graficos();
